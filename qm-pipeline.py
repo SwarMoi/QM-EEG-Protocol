@@ -29,7 +29,7 @@ raw_file = '/media/swarmoi/QM-Drive/Dropbox/SAVANT-Personal/QM-EEG/QM-EEG-Protoc
 raw = mne.io.read_raw_bdf(raw_file, preload=False)
 
 #events_file = root / 'sample_audvis_filt-0-40_raw-eve.fif'
-#events = mne.read_events(events_file)
+events = mne.read_events(events_file)
 
 raw.crop(tmax=90)  # in seconds (happens in-place)
 # discard events >90 seconds (not strictly necessary, but avoids some warnings)
